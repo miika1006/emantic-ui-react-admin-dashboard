@@ -7,9 +7,9 @@ export const DesktopMenu = () => {
   const toggleMenu = item => event => {
     if (item) setActiveItem(item);
   };
-
+  const borderRadiusZero = { borderRadius: "0" };
   return (
-    <Menu inverted color="blue" fluid style={{ borderRadius: "0" }}>
+    <Menu inverted color="blue" fluid style={borderRadiusZero}>
       <Container>
         <Menu.Item
           active={activeItem === "dashboard"}
