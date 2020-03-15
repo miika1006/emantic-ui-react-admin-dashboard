@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { Grid, Rail, Header, Segment } from "semantic-ui-react";
 
-export const Layout = ({ side, main }) => {
+export const Layout = ({ side, children }) => {
   const nosidePadding = { paddingLeft: "0", paddingRight: "0" };
   const minimumWindowHeightAndAlign = { minHeight: "100vh", margin: "0" };
   const fullWidthAndAlignTop = { width: "100%", marginTop: "4em" };
@@ -41,7 +41,7 @@ export const Layout = ({ side, main }) => {
             computer={13}
             style={nosidePadding}
           >
-            {main}
+            {children}
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -51,5 +51,5 @@ export const Layout = ({ side, main }) => {
 
 Layout.propTypes = {
   side: PropTypes.node,
-  main: PropTypes.node
+  children: PropTypes.node
 };
