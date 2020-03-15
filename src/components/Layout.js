@@ -4,12 +4,12 @@ import { Grid, Rail, Header, Segment } from "semantic-ui-react";
 
 export const Layout = ({ side, main }) => {
   const nosidePadding = { paddingLeft: "0", paddingRight: "0" };
-  const minimumWindowHeight = { minHeight: "100vh", margin: "0" };
-  const rail = { width: "100%", marginTop: "4em" };
+  const minimumWindowHeightAndAlign = { minHeight: "100vh", margin: "0" };
+  const fullWidthAndAlignTop = { width: "100%", marginTop: "4em" };
   const noPadding = { padding: "0" };
   return (
     <Fragment>
-      <Grid padded="horizontally" style={minimumWindowHeight}>
+      <Grid padded="horizontally" style={minimumWindowHeightAndAlign}>
         <Grid.Row style={noPadding}>
           <Grid.Column
             width={3}
@@ -25,7 +25,12 @@ export const Layout = ({ side, main }) => {
               </Header>
             </Segment>
 
-            <Rail position="left" attached internal style={rail}>
+            <Rail
+              position="left"
+              attached
+              internal
+              style={fullWidthAndAlignTop}
+            >
               {side}
             </Rail>
           </Grid.Column>
