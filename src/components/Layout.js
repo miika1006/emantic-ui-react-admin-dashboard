@@ -14,7 +14,7 @@ export const Layout = ({ side, children }) => {
           <Grid.Column
             width={3}
             tablet={4}
-            computer={3}
+            computer={2}
             color="blue"
             style={nosidePadding}
             only="computer tablet"
@@ -38,7 +38,7 @@ export const Layout = ({ side, children }) => {
             width={13}
             mobile={16}
             tablet={12}
-            computer={13}
+            computer={14}
             style={nosidePadding}
           >
             {children}
