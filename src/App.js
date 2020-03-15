@@ -1,14 +1,21 @@
-import React from "react";
-import { Container } from "semantic-ui-react";
+import React, { Fragment } from "react";
+import { Segment } from "semantic-ui-react";
 import { TopMenu } from "./components/TopMenu";
 import { SubMenu } from "./components/SubMenu";
+import { Layout } from "./components/Layout";
 
 const App = () => (
-  <React.Fragment>
-    <TopMenu />
-    <SubMenu />
-    <Container>Main content</Container>
-  </React.Fragment>
+  <Layout
+    side={<SubMenu />}
+    main={
+      <Fragment>
+        <TopMenu />
+        <div>
+          <Segment basic>Main content</Segment>
+        </div>
+      </Fragment>
+    }
+  />
 );
 
 export default App;
