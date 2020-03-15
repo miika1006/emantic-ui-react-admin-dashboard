@@ -12,7 +12,6 @@ export const Layout = ({ side, children }) => {
       <Grid padded="horizontally" style={minimumWindowHeightAndAlign}>
         <Grid.Row style={noPadding}>
           <Grid.Column
-            width={3}
             tablet={4}
             computer={2}
             color="blue"
@@ -35,7 +34,6 @@ export const Layout = ({ side, children }) => {
             </Rail>
           </Grid.Column>
           <Grid.Column
-            width={13}
             mobile={16}
             tablet={12}
             computer={14}
