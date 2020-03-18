@@ -1,7 +1,13 @@
 {
   "name": "semantic-ui-react-admin-dashboard",
+  "author": {
+    "name": "Miika Mehtälä",
+    "url": "https://github.com/miika1006/semantic-ui-react-admin-dashboard"
+  },
+  "license": "MIT",
   "version": "1.0.0",
   "private": true,
+  "description": "Admin dashboard template",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
