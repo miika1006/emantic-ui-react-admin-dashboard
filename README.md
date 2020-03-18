@@ -1,24 +1,51 @@
-# In Progress...
-
 # Semantic UI React Admin Dashboard template
 
-Very simple wireframe template to get started for admin dashboard. Created with create-react-app.
+Very simple wireframe template to get started for admin dashboard. Created with create-react-app and then used Semantic library for UI. Check [Semantic UI React documentation](https://react.semantic-ui.com/) and [github](https://github.com/Semantic-Org/Semantic-UI-React).
 
-![Computer View of Dashboard](https://github.com/miika1006/semantic-ui-react-admin-dashboard/raw/master/screenshots/Screenshot_1.png)
+Look at the source code and use in your project with
+`copy & paste`.
+
+---
+
+### Computer View
+
+## ![Computer View of Dashboard](https://github.com/miika1006/semantic-ui-react-admin-dashboard/raw/master/screenshots/Screenshot_1.png)
+
+---
+
+## Mobile View
 
 ![Mobile View of Dashboard](https://github.com/miika1006/semantic-ui-react-admin-dashboard/raw/master/screenshots/Screenshot_2.png)
 
-# TODO:
+---
 
-Incoming documentation...
+## Topmenu open
 
-## Create React App Stuff
+![Mobile View of Dashboard](https://github.com/miika1006/semantic-ui-react-admin-dashboard/raw/master/screenshots/Screenshot_3.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-### Available Scripts
+## Submenu open
+
+![Mobile View of Dashboard](https://github.com/miika1006/semantic-ui-react-admin-dashboard/raw/master/screenshots/Screenshot_4.png)
+
+---
+
+## Get started
+
+Look at the source code and use in your project.
+
+`copy & paste`
+
+## Or run the app
+
+Clone or download files in this repo.
 
 In the project directory, you can run:
+
+`npm install`
+
+To install packages and then:
 
 `npm start`
 
