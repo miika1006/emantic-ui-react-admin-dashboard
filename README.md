@@ -7,7 +7,7 @@ Look at the source code and use in your project with
 
 ---
 
-### Computer View
+### Large Screen View
 
 ## ![Computer View of Dashboard](https://github.com/miika1006/semantic-ui-react-admin-dashboard/raw/master/screenshots/Screenshot_1.png)
 
