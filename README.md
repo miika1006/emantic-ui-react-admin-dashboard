@@ -1,4 +1,4 @@
-# Semantic UI React Admin Dashboard template
+# Semantic UI React Admin Dashboard wireframe template
 
 Very simple wireframe template to get started for admin dashboard. Created with create-react-app and then used Semantic library for UI. Check [Semantic UI React documentation](https://react.semantic-ui.com/) and [github](https://github.com/Semantic-Org/Semantic-UI-React).
 
