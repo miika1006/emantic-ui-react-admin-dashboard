@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Grid, Rail, Header, Segment } from "semantic-ui-react";
 
 export const Layout = ({ side, children }) => {
+  const menuColor = "grey";
   const nosidePadding = { paddingLeft: "0", paddingRight: "0" };
   const minimumWindowHeightAndAlign = { minHeight: "100vh", margin: "0" };
   const fullWidthAndAlignTop = { width: "100%", marginTop: "4em" };
@@ -13,8 +14,9 @@ export const Layout = ({ side, children }) => {
         <Grid.Row style={noPadding}>
           <Grid.Column
             tablet={4}
-            computer={2}
-            color="blue"
+            computer={3}
+            largeScreen={2}
+            color={menuColor}
             style={nosidePadding}
             only="computer tablet"
           >
@@ -33,10 +35,12 @@ export const Layout = ({ side, children }) => {
               {side}
             </Rail>
           </Grid.Column>
+
           <Grid.Column
             mobile={16}
             tablet={12}
-            computer={14}
+            computer={13}
+            largeScreen={14}
             style={nosidePadding}
           >
             {children}
