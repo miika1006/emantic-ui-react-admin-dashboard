@@ -8,6 +8,7 @@ export const Layout = ({ side, children }) => {
   const minimumWindowHeightAndAlign = { minHeight: "100vh", margin: "0" };
   const fullWidthAndAlignTop = { width: "100%", paddingTop: "4em" };
   const noPadding = { padding: "0" };
+  const noMarginPadding = { padding: "0", margin: "0" };
   return (
     <Fragment>
       <Grid padded="horizontally" style={minimumWindowHeightAndAlign}>
@@ -17,7 +18,7 @@ export const Layout = ({ side, children }) => {
             computer={3}
             largeScreen={2}
             color={menuColor}
-            style={nosidePadding}
+            style={noMarginPadding}
             only="computer tablet"
           >
             <Segment basic>
