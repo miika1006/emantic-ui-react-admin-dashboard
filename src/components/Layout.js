@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import { Grid, Rail, Header, Segment } from "semantic-ui-react";
+import { Grid, Rail, Header, Segment, Icon } from "semantic-ui-react";
 
 export const Layout = ({ side, children }) => {
   const menuColor = "grey";
   const nosidePadding = { paddingLeft: "0", paddingRight: "0" };
   const minimumWindowHeightAndAlign = { minHeight: "100vh", margin: "0" };
-  const fullWidthAndAlignTop = { width: "100%", marginTop: "4em" };
+  const fullWidthAndAlignTop = { width: "100%", paddingTop: "4em" };
   const noPadding = { padding: "0" };
   return (
     <Fragment>
@@ -22,6 +22,7 @@ export const Layout = ({ side, children }) => {
           >
             <Segment basic>
               <Header as="h5" inverted>
+                <Icon name="adn" />
                 Admin Dashboard
               </Header>
             </Segment>
@@ -53,5 +54,5 @@ export const Layout = ({ side, children }) => {
 
 Layout.propTypes = {
   side: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
