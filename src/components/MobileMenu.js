@@ -3,9 +3,9 @@ import { Menu, Icon, Header } from "semantic-ui-react";
 
 export const MobileMenu = ({ children }) => {
   const [show, setShow] = useState(false);
-  const [activeItem, setActiveItem] = useState("Dashboard");
+  const [activeItem, setActiveItem] = useState("dashboard");
 
-  const toggleMenu = item => event => {
+  const toggleMenu = (item) => (event) => {
     setShow(!show);
     if (item) setActiveItem(item);
   };
@@ -35,29 +35,29 @@ export const MobileMenu = ({ children }) => {
       {show && (
         <Menu stackable color={menuColor} secondary inverted style={nomargin}>
           <Menu.Item
-            active={activeItem === "Dashboard"}
-            onClick={toggleMenu("Dashboard")}
+            active={activeItem === "dashboard"}
+            onClick={toggleMenu("dashboard")}
           >
             <Icon name="dashboard" />
             Dashboard
           </Menu.Item>
           <Menu.Item
-            active={activeItem === "Warehouse"}
-            onClick={toggleMenu("Warehouse")}
+            active={activeItem === "warehouse"}
+            onClick={toggleMenu("warehouse")}
           >
             <Icon name="warehouse" />
             Warehouse
           </Menu.Item>
           <Menu.Item
-            active={activeItem === "Reports"}
-            onClick={toggleMenu("Reports")}
+            active={activeItem === "reports"}
+            onClick={toggleMenu("reports")}
           >
             <Icon name="line graph" />
             Reports
           </Menu.Item>
           <Menu.Item
-            active={activeItem === "Settings"}
-            onClick={toggleMenu("Settings")}
+            active={activeItem === "settings"}
+            onClick={toggleMenu("settings")}
           >
             <Icon name="settings" />
             Settings
