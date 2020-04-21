@@ -1,0 +1,32 @@
+.ui.grid > .row.layout-grid-row {
+  padding: 0;
+}
+.ui.segment.layout-admin-title {
+  margin: 0;
+  padding: 0.8em;
+  margin-top: 1em;
+  padding-bottom: 0.5em;
+}
+.layout-admin-title .ui.header {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.rail.layout-rail {
+  width: 100%;
+}
+.ui.grid.layout-grid {
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+.layout-grid .layout-grid-row .column.layout-side-column {
+  transition: all 0.2s;
+}
+
+.layout-grid .layout-grid-row .column.layout-main-column {
+  padding-left: 0;
+  padding-right: 0;
+  transition: all 0.2s;
+}

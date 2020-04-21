@@ -9,7 +9,7 @@ export const DesktopMenu = () => {
   };
   const borderRadiusZero = { borderRadius: "0" };
   return (
-    <Menu inverted color={menuColor} fluid style={borderRadiusZero}>
+    <Menu color={menuColor} fluid style={borderRadiusZero}>
       <Menu.Item
         active={activeItem === "dashboard"}
         onClick={toggleMenu("dashboard")}

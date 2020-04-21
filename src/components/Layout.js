@@ -1,39 +1,41 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import PropTypes from "prop-types";
 import { Grid, Rail, Header, Segment, Icon } from "semantic-ui-react";
-
+import "./Layout.css";
 export const Layout = ({ side, children }) => {
-  const menuColor = "grey";
-  const nosidePadding = { paddingLeft: "0", paddingRight: "0" };
-  const minimumWindowHeightAndAlign = { minHeight: "100vh", margin: "0" };
-  const fullWidthAndAlignTop = { width: "100%", paddingTop: "4em" };
-  const noPadding = { padding: "0" };
-  const noMarginPadding = { padding: "0", margin: "0" };
+  const [show, toggleSide] = useState(true);
+  const toggleMenu = (item) => (event) => {
+    toggleSide(!show);
+  };
   return (
     <Fragment>
-      <Grid padded="horizontally" style={minimumWindowHeightAndAlign}>
-        <Grid.Row style={noPadding}>
+      <Grid padded="horizontally" className="layout-grid">
+        <Grid.Row className="layout-grid-row">
           <Grid.Column
             tablet={4}
             computer={3}
-            largeScreen={2}
-            color={menuColor}
-            style={noMarginPadding}
+            largeScreen={show ? 2 : 1}
+            color="grey"
             only="computer tablet"
+            className="layout-side-column"
           >
-            <Segment basic>
-              <Header as="h5" inverted>
-                <Icon name="adn" />
-                Admin Dashboard
-              </Header>
-            </Segment>
+            <Rail position="left" attached internal className="layout-rail">
+              <Segment
+                basic
+                inverted
+                color="grey"
+                className="layout-admin-title"
+              >
+                <Header
+                  as="h5"
+                  onClick={toggleMenu()}
+                  textAlign={show ? undefined : "center"}
+                >
+                  <Icon name="adn" />
+                  {show && "Admin Dashboard"}
+                </Header>
+              </Segment>
 
-            <Rail
-              position="left"
-              attached
-              internal
-              style={fullWidthAndAlignTop}
-            >
               {side}
             </Rail>
           </Grid.Column>
@@ -42,8 +44,8 @@ export const Layout = ({ side, children }) => {
             mobile={16}
             tablet={12}
             computer={13}
-            largeScreen={14}
-            style={nosidePadding}
+            largeScreen={show ? 14 : 15}
+            className="layout-main-column"
           >
             {children}
           </Grid.Column>
