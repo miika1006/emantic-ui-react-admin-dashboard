@@ -9,7 +9,7 @@ Look at the source code and use in your project with
 
 ### Large Screen View
 
-todo: screenshot
+![Large screen View of Dashboard](https://github.com/miika1006/semantic-ui-react-admin-dashboard/raw/master/screenshots/Screenshot_1.png)
 
 ---
 
