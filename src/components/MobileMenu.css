@@ -1,0 +1,9 @@
+.ui.mobilemenu.menu {
+  margin: 0;
+}
+.ui.header.mobilemenu-header {
+  text-transform: capitalize;
+}
+.ui.mobilemenu-list.menu {
+  margin: 0;
+}

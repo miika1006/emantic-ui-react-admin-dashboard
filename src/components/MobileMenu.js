@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, Icon, Header } from "semantic-ui-react";
-
+import "./MobileMenu.css";
 export const MobileMenu = ({ children }) => {
   const [show, setShow] = useState(false);
   const [activeItem, setActiveItem] = useState("dashboard");
@@ -11,8 +11,6 @@ export const MobileMenu = ({ children }) => {
   };
 
   const menuColor = "grey";
-  const nomargin = { margin: "0" };
-  const capitalize = { textTransform: "capitalize" };
 
   return (
     <React.Fragment>
@@ -21,10 +19,10 @@ export const MobileMenu = ({ children }) => {
         onClick={toggleMenu()}
         inverted={show}
         color={show ? menuColor : undefined}
-        style={nomargin}
+        className="mobilemenu"
       >
         <Menu.Item>
-          <Header as="h1" inverted={show} style={capitalize}>
+          <Header as="h1" inverted={show} className="mobilemenu-header">
             {activeItem}
           </Header>
         </Menu.Item>
@@ -33,7 +31,13 @@ export const MobileMenu = ({ children }) => {
         </Menu.Item>
       </Menu>
       {show && (
-        <Menu stackable color={menuColor} secondary inverted style={nomargin}>
+        <Menu
+          stackable
+          color={menuColor}
+          secondary
+          inverted
+          className="mobilemenu-list"
+        >
           <Menu.Item
             active={activeItem === "dashboard"}
             onClick={toggleMenu("dashboard")}

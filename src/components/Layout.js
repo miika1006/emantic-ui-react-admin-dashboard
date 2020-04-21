@@ -1,23 +1,18 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { Grid, Rail, Header, Segment, Icon } from "semantic-ui-react";
 import "./Layout.css";
 export const Layout = ({ side, children }) => {
-  const [show, toggleSide] = useState(true);
-  const toggleMenu = (item) => (event) => {
-    toggleSide(!show);
-  };
   return (
     <Fragment>
       <Grid padded="horizontally" className="layout-grid">
         <Grid.Row className="layout-grid-row">
           <Grid.Column
-            tablet={4}
-            computer={3}
-            largeScreen={show ? 2 : 1}
+            tablet={2}
+            computer={2}
+            largeScreen={1}
             color="grey"
             only="computer tablet"
-            className="layout-side-column"
           >
             <Rail position="left" attached internal className="layout-rail">
               <Segment
@@ -26,13 +21,8 @@ export const Layout = ({ side, children }) => {
                 color="grey"
                 className="layout-admin-title"
               >
-                <Header
-                  as="h5"
-                  onClick={toggleMenu()}
-                  textAlign={show ? undefined : "center"}
-                >
+                <Header as="h5" textAlign={"center"} icon size="tiny">
                   <Icon name="adn" />
-                  {show && "Admin Dashboard"}
                 </Header>
               </Segment>
 
@@ -42,9 +32,9 @@ export const Layout = ({ side, children }) => {
 
           <Grid.Column
             mobile={16}
-            tablet={12}
-            computer={13}
-            largeScreen={show ? 14 : 15}
+            tablet={14}
+            computer={14}
+            largeScreen={15}
             className="layout-main-column"
           >
             {children}

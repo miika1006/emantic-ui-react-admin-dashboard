@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { Menu, Icon } from "semantic-ui-react";
+import "./DesktopMenu.css";
 
 export const DesktopMenu = () => {
   const [activeItem, setActiveItem] = useState("dashboard");
-  const menuColor = "grey";
   const toggleMenu = (item) => (event) => {
     if (item) setActiveItem(item);
   };
-  const borderRadiusZero = { borderRadius: "0" };
   return (
-    <Menu color={menuColor} fluid style={borderRadiusZero}>
+    <Menu color="grey" fluid className="desktopmenu">
       <Menu.Item
         active={activeItem === "dashboard"}
         onClick={toggleMenu("dashboard")}

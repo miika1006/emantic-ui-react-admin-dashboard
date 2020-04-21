@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import { Menu, Icon, Header } from "semantic-ui-react";
-
+import "./MobileSubMenu.css";
 export const MobileSubMenu = () => {
   const [show, setShow] = useState(false);
-  const [activeItem, setActiveItem] = useState("Submenu #1");
+  const [activeItem, setActiveItem] = useState("users");
 
-  const toggleMenu = item => event => {
+  const toggleMenu = (item) => (event) => {
     setShow(!show);
     if (item) setActiveItem(item);
   };
   const menuColor = "grey";
-  const nomargin = { margin: "0" };
-  const capitalize = { textTransform: "capitalize" };
 
   return (
     <React.Fragment>
@@ -20,10 +18,10 @@ export const MobileSubMenu = () => {
         onClick={toggleMenu()}
         inverted={show}
         color={show ? menuColor : undefined}
-        style={nomargin}
+        className="mobilesubmenu"
       >
         <Menu.Item>
-          <Header inverted={show} as="h3" style={capitalize}>
+          <Header inverted={show} as="h3" className="mobilesubmenu-header">
             {activeItem}
           </Header>
         </Menu.Item>
@@ -32,30 +30,40 @@ export const MobileSubMenu = () => {
         </Menu.Item>
       </Menu>
       {show && (
-        <Menu stackable color={menuColor} secondary inverted style={nomargin}>
+        <Menu
+          stackable
+          color={menuColor}
+          secondary
+          inverted
+          className="mobilesubmenu-list"
+        >
           <Menu.Item
-            active={activeItem === "Submenu #1"}
-            onClick={toggleMenu("Submenu #1")}
+            active={activeItem === "users"}
+            onClick={toggleMenu("users")}
           >
-            Submenu #1
+            <Icon name="users" />
+            Users
           </Menu.Item>
           <Menu.Item
-            active={activeItem === "Submenu #2"}
-            onClick={toggleMenu("Submenu #2")}
+            active={activeItem === "logs"}
+            onClick={toggleMenu("logs")}
           >
-            Submenu #2
+            <Icon name="file" />
+            Logs
           </Menu.Item>
           <Menu.Item
-            active={activeItem === "Submenu #3"}
-            onClick={toggleMenu("Submenu #3")}
+            active={activeItem === "archive"}
+            onClick={toggleMenu("archive")}
           >
-            Submenu #3
+            <Icon name="archive" />
+            Archive
           </Menu.Item>
           <Menu.Item
-            active={activeItem === "Submenu #4"}
-            onClick={toggleMenu("Submenu #4")}
+            active={activeItem === "messages"}
+            onClick={toggleMenu("messages")}
           >
-            Submenu #4
+            <Icon name="envelope" />
+            Messages
           </Menu.Item>
         </Menu>
       )}
