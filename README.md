@@ -9,17 +9,11 @@ Look at the source code and use in your project with
 
 ### Large Screen View
 
-## ![Computer View of Dashboard](https://github.com/miika1006/semantic-ui-react-admin-dashboard/raw/master/screenshots/Screenshot_1.png)
+todo: screenshot
 
 ---
 
 ## Mobile View
-
-![Mobile View of Dashboard](https://github.com/miika1006/semantic-ui-react-admin-dashboard/raw/master/screenshots/Screenshot_2.png)
-
----
-
-## Topmenu open
 
 ![Mobile View of Dashboard](https://github.com/miika1006/semantic-ui-react-admin-dashboard/raw/master/screenshots/Screenshot_3.png)
 
